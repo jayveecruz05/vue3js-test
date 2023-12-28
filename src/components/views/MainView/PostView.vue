@@ -108,7 +108,7 @@
   <el-table v-loading="isLoading" id="post-table" :data="store.list" :empty-text="(isLoading) ? 'Loading Data...' : null">
     <el-table-column prop="title" label="Title" width="300" />
     <el-table-column prop="body" label="Body" width="650" />
-    <el-table-column fixed="right" label="Actions" width="120">
+    <el-table-column fixed="right" label="Actions" width="130">
       <template #default="scope">
         <el-button link type="primary" size="small" @click="editData(scope)">Edit</el-button>
         <el-button link type="primary" size="small" :loading="(scope.row.id === selectedDataID)" @click="confirm('warning', 'Warning', 'Are you sure you want to delete the data. Continue?', scope)">Delete</el-button>
